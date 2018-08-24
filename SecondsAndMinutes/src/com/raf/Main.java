@@ -2,26 +2,29 @@ package com.raf;
 
 public class Main {
 
+    private static final String INVALID_INPUT_MESSAGE = "Invalid input";
+
     public static void main(String[] args) {
 
-        getDurationString(129, 30);
-        getDurationString(3645);
-
+        System.out.println(getDurationString(70, 30));
+        System.out.println(getDurationString(-13452, 0));
+        System.out.println(getDurationString(3600));
+        System.out.println(getDurationString(3600, -10));
+        System.out.println(getDurationString(124345));
     }
 
     public static String getDurationString(int minutes, int seconds) {
 
         if (minutes < 0 || seconds < 0 || seconds > 59) {
-            System.out.println("Invalid input");
-            return "Invalid input";
+            return INVALID_INPUT_MESSAGE;
         }
 
         int hours = minutes / 60;
         minutes = minutes % 60;
 
-        String hoursResult = "" + hours + "h";
-        String minutesResult = "" + minutes + "m";
-        String secondsResult = "" + seconds + "s";
+        String hoursResult = hours + "h";
+        String minutesResult = minutes + "m";
+        String secondsResult = seconds + "s";
 
 
         if (hours < 10) {
@@ -35,15 +38,12 @@ public class Main {
         }
 
         String result = hoursResult + minutesResult + secondsResult;
-        System.out.println(result);
-
         return result;
     }
 
     public static String getDurationString(int seconds) {
         if (seconds < 0) {
-            System.out.println("Invalid input");
-            return "Invalid input";
+            return INVALID_INPUT_MESSAGE;
         }
 
         int minutes = seconds / 60;
