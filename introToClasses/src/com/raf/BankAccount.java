@@ -8,6 +8,18 @@ public class BankAccount {
     private String customerEmail;
     private String customerPhoneNumber;
 
+    public BankAccount() {
+        this(0000000, 0, "Default Name", "Default  Email", "Default Phone NUmber");
+    }
+
+    public BankAccount(long accNumber, long accBalance, String customerName, String customerEmail, String customerPhoneNumber) {
+        this.accNumber = accNumber;
+        this.accBalance = accBalance;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPhoneNumber = customerPhoneNumber;
+    }
+
     public void setAccNumber(long accNumber) {
         this.accNumber = accNumber;
     }

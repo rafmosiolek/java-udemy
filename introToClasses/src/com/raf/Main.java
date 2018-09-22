@@ -18,13 +18,9 @@ public class Main {
 
 
 
-        BankAccount johnDoe = new BankAccount();
+        BankAccount johnDoe = new BankAccount(123456789, 10000, "John Doe",
+                "johndoe@gmail.com", "0-111-222-333");
 
-        johnDoe.setAccNumber(123456789);
-        johnDoe.setAccBalance(10000);
-        johnDoe.setCustomerName("John Doe");
-        johnDoe.setCustomerEmail("johndoe@gmail.com");
-        johnDoe.setCustomerPhoneNumber("0-111-222-333");
 
         System.out.println("New bank account belongs to: " + johnDoe.getCustomerName() + ", email address: " +
                             johnDoe.getCustomerEmail() + ", phone number: " + johnDoe.getCustomerPhoneNumber());
@@ -41,5 +37,8 @@ public class Main {
         johnDoe.withdrawFunds(50000);
 
         System.out.println(johnDoe.getCustomerName() + " current account balance is: " + johnDoe.getAccBalance());
+
+        BankAccount testAcc = new BankAccount();
+        System.out.println("testAcc name is: " + testAcc.getCustomerName());
     }
 }
