@@ -13,5 +13,6 @@ public class Main {
         PC thePC = new PC(theCase, theMonitor, theMotherboard);
         thePC.getMonitor().drawPixelAt(10, 20, "red");
         thePC.getMotherboard().loadProgram("Windows 3.11");
+        thePC.getTheCase().pressPowerButton();
     }
 }
