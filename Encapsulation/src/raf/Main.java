@@ -20,8 +20,5 @@ public class Main {
 
         EnhancedPlayer enhancedPlayer = new EnhancedPlayer("Raf", 200, "knife");
         System.out.println("Initial health is " + enhancedPlayer.getHealth());
-
-
-
     }
 }
