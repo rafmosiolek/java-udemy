@@ -17,5 +17,11 @@ public class Main {
         player.loseHealth(dmg);
         System.out.println("Remaining health = " + player.healthRemaining());
 
+
+        EnhancedPlayer enhancedPlayer = new EnhancedPlayer("Raf", 200, "knife");
+        System.out.println("Initial health is " + enhancedPlayer.getHealth());
+
+
+
     }
 }
